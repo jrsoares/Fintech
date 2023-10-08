@@ -1,6 +1,5 @@
 import React from "react";
-
-import DateRange from "./DateRange.tsx";
+import DateRange from "./DateRange";
 
 const Header = () => {
   return (
