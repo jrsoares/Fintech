@@ -1,15 +1,20 @@
+import Header from "./Components/Header";
+import Sidenav from "./Components/Sidenav";
+import { DataContextProvider } from "./Context/DataContext";
+import Resumo from "./Pages/Resumo";
 import "./Style.css";
-import { DataContentProvider } from "./context/DataContext.tsx";
-import Header from "./components/Header.tsx";
-import Resumo from "./pages/resume.tsx";
+
 function App() {
   return (
-    <div className={"container"}>
-      <DataContentProvider>
-        <Header />
-        <Resumo />
-      </DataContentProvider>
-    </div>
+    <DataContextProvider>
+      <div className="container">
+        <Sidenav />
+        <main>
+          <Header />
+          <Resumo />
+        </main>
+      </div>
+    </DataContextProvider>
   );
 }
 
